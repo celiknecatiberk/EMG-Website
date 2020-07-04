@@ -1,0 +1,1139 @@
+/* <li class="nav-item" title="Home" onclick="location:'index.php'">
+<div id="keyboardIcon"><i style="font-size:45px;" class="fas fa-keyboard"></i></div>
+</li> */
+   
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;   
+}
+
+html{
+    font-size: 10px; 
+    height: 100%;    
+}
+
+body{
+    font-family: 'lato', sans-serif;
+    font-size: 1.6em;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: rgb(255,255,255) !important;
+   
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{         
+    list-style-type: none; /* Bu sayede tim ul elemanları altında ki default olarak tanımlanan madde işaretleri kaldırılmış oldu*/ 
+}
+
+.clearfix::after{    /* Bunu eklemezsek navbar boyu kısa kalıyo ve yazılar kesişime denk geliyo*/
+    content:"";
+    display: block;  /* Eklenen eleman görünmez bir eleman   udemy video 97, dakika 2.30 */  
+    clear: both;
+}
+
+.container{  /* Sayfanın Genişliği*/
+    width: 140rem;  /*Eğer satırda yer varsa sağdan ve soldan 1140px ortalamak istiyorum*/
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: .5rem; /* Container içeriğini padding değeri ile biraz daha içeri alacağız,sol ve sağ tarafa tamamen yanaşsın istemiyoruz. .5rem = 5px */
+    padding-right: .5rem;
+
+}
+
+.containerNav{
+
+    width: 150rem;  
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: .5rem; 
+    padding-right: .5rem;
+}
+
+.text-uppercase{
+    text-transform: uppercase;
+}
+
+
+/*  *** NAVBAR *** */
+nav{
+    width: 100%;
+    font-family: Montserrat;
+    background-color: rgb(177,105,92);
+    color: #212529;
+    padding: 2.4rem 0rem;
+    position:sticky; 
+    z-index:30;
+    top: 0em;
+}
+#logo-box{
+    float: left; /*LOGO kısmını yani 'EMG' sol tarafa hizaladık.*/
+}
+
+#logo-box .logo{
+    color: #212529;
+    font-weight: 700;
+    font-size: 5.5rem;
+    letter-spacing: .5rem;
+}
+
+#nav-links{   /*LİNKLER'İ kısmını yani 'Home, Login, Register ve EXTRA' sağ tarafa hizaladık.*/
+    float:left;
+    text-align: center;
+}
+
+#nav-links .nav-item { /* Bu kısmı eklemezsek navbar daki nav-itemler (eşittir li'ler ) alt alta gelir, yan yana gelmez*/
+    float: left;
+    margin-left: .1rem; 
+    margin-top:1.9rem;
+}
+
+
+#nav-links .nav-link{  /* #nav-links'in altında ki #nav-link yani Home, Register ...*/
+    color: #212529;
+    font-size: 1.58rem;
+    /* font-weight: 700;   Burası Opsiyonel olarak yazılabilir sasdece 700'ü destekler çünkü header kısmına eklediğimiz linkte sadece bunlar mevcut (google fonts)  */
+    display: block;  /* Eksik yazdım gerekmediği için bu da eksik yazılan koda bağlı*/
+    letter-spacing: .1rem;
+    transition: color .8s;
+}
+
+#nav-links .nav-link:hover{
+    color:  rgb(230,207,139);
+}
+
+.containerNav .input-group{
+    float:left;
+    margin-top:2.5rem;
+    margin-left: 8.5rem;
+    margin-right: 4.5rem;
+    width:26rem;
+    transform: translate(-4rem, -1.2rem);
+}
+
+.input-group input{
+    height: 3.5rem;
+    transform: translateY(-0.6rem);
+}
+
+.input-group button{
+    height: 3.5rem;
+    transform: translateY(-0.6rem);
+    width: 4rem;
+}
+
+.form-control:focus{
+    border: none;
+    border-radius: .7rem;  
+}
+
+#keyboardIcon{
+    transform: translateX(-0.5rem);
+}
+
+#keyboardIcon:hover{
+color: rgb(230,207,139);
+transition-property: all;    
+transition-duration: 0.8s;
+transition-timing-function: ease-in-out;
+}
+/* ***** HEADER ***** */ 
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+header{
+    padding-top:1.8rem;
+  /* padding-top: calc(130px + 6rem);  calc'ın amacı 1.6 rem i hesaplması (yukarıda html class'ına 10px verilmişti 10px * 1.6rem) 160px olarak random rakam değil web side sğ tık incele kısmından nav'ın uzunluğu  */ 
+    padding-bottom: 6rem;
+    text-align: center;
+    height: 100%;
+    background-color: rgb(230,207,139);
+    
+}
+
+header #slider{  
+    margin-left: 5%;
+    margin-right: 5%;
+    box-shadow: 0px 0px 13px -3px rgba(0,0,0,1);
+}
+
+header img{   /* Slider daki resimlerin hepsinin aynı boyda olmasını sağladık */
+    height: 55rem;
+    
+ 
+}
+
+.main-header{
+    font-size: 6rem;
+    letter-spacing: .4rem;
+    box-shadow: 0rem .5rem 3rem 0 rgba(2, 2, 2, 0.40);
+    background-color: rgb(20,52,65);
+    color:white;
+    border: .3rem;
+    border-radius: 5rem;
+    margin: 5% 0;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: .8rem 1.6rem;
+    text-decoration: none;
+    display: inline-block; 
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bolder;
+    margin: .2rem .1rem;
+    cursor: pointer;
+    transition: all .2s;
+    text-transform: capitalize;
+}
+  
+
+.categories-elements{
+    float: left;
+    width: 34rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: .5rem  -.4rem  1.7rem  0px rgba(0,0,0,0.6);
+    margin-right: 40px;
+    border: 1px solid #ccc;
+    
+}
+
+.categories-elements img{
+    height: 40.3rem;
+    object-fit: fill;
+    transition-property: all;           /* ya da tek satırda "transition: all 1s ease-in-out;" */
+    transition-duration: 0.8s;
+    transition-timing-function: ease-in-out; 
+}
+
+.categories-elements img:hover{
+    opacity: 0.7;
+}
+
+.categories-elements a:hover{ /* SİLME */
+    text-decoration: none;  
+}
+
+.categories-elements p{
+    font-size: 2rem;
+    letter-spacing: .3rem;
+    transition-property: all;    
+    transition-duration: 0.8s;
+    transition-timing-function: ease-in-out; 
+    text-align: center;
+}
+
+.categories-elements p:hover{
+    font-size: 2.5rem;
+}
+
+
+.categories-elements .card-body{
+    height: 12rem;
+}
+
+.categories-elements .card-body{
+    font-family: 'Playfair Display SC', serif;
+}
+
+.categories-elements button{
+    font-family:  'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.button-second{
+    background-color: white; 
+    color: black; 
+    border: .2rem solid #2c6d95;
+   
+}
+
+.button-second:hover{
+    border-radius: 3rem;
+    transition-property: all;           
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out; 
+    background-color:  #2c6d95;
+    border: .8rem solid  #2c6d95;
+    text-decoration: none;
+    
+}
+
+.button-second:focus{
+    background-color: #2c6d95;
+    border: none;
+    border-radius: .1rem;  
+}
+
+
+
+.button-third{
+    background-color: rgb(230,207,139); 
+    color: black; 
+    border: 1.5rem solid rgb(230,207,139);
+
+}
+
+.button-third:hover{
+    transition-property: all;           
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out; 
+    background-color:  rgb(230,207,139);
+    text-decoration: none;
+    border-radius: 4rem;
+}
+
+
+.button-fourth{
+    background-color: rgb(135,193,218); 
+    color: black; 
+    border: 1rem solid rgb(135,193,218); 
+    padding: 1.5rem;
+    
+    
+}
+
+.button-fourth:hover{
+    transition-property: all;           
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out; 
+    background-color:  rgb(135,193,218); 
+    border: 1rem solid  rgb(135,193,218); 
+    text-decoration: none;
+    border-radius: 4rem;
+
+}
+
+
+.bookContent #button1{
+    margin-top: 5rem;
+    margin-left: 35rem;
+    margin-right: 4rem;
+    color:rgb(33,37,41);
+    letter-spacing: .1rem;
+    font-family: Georgia, serif;
+    
+}
+
+
+.bookContent #button2{
+    color:rgb(33,37,41);
+    letter-spacing: .1rem;
+    font-family: Georgia, serif;
+}
+
+
+
+.bookContent #button3{
+    transform: translateY(-6.4rem);
+    margin-left:6rem;
+    color:rgb(33,37,41);
+    letter-spacing: .1rem;
+    font-family: Georgia, serif;
+    
+ 
+}
+/****** FOOTER ***** */ 
+
+.footer{     
+    width: 100%;
+    background-color: #143441;
+    color:black;
+    text-align: center;
+    display: flex; /* Displayin flexbox olduğunu belirtiyo ve daha sonra itemleri sıralıyo*/
+    position: sticky;
+    z-index:30;
+}
+
+.footer-content{ 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 auto;
+    color: white;
+}
+
+.footer-content p{
+    margin-top: 1.3rem;
+    font-size: 1.3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.fab{
+    margin: .6rem .8rem 1.3rem 0;
+    font-size: 2.8rem;
+    color: rgb(230,207,139);
+}
+
+.fab:hover{
+    opacity: .5;
+    transition: all .7s ease-in-out;
+}
+
+/* ***** LOGIN  + REGISTER ***** */ 
+.login-register-form{     /* ÖNEMLİ */
+    margin-top: 2rem;
+    margin-bottom: 3.4rem;
+}
+
+.register-form{
+    padding: 3rem 3rem 2.4rem 3rem;
+    background-color: rgb(238,238,238);
+    border:1px solid #ccc;
+      
+}
+.login-form{
+    padding: 3rem 3rem 2.4rem 3rem;
+    background-color: rgb(238,238,238);   
+    margin-bottom: 24.6rem; 
+    border:1px solid #ccc;
+}
+
+.login-form .btn{
+    margin-bottom: 1.8rem;
+} 
+
+#l-message{
+    margin-top: 0.8rem;
+}
+.register-form .btn{
+    margin-bottom: 0rem;
+}
+
+#s-message{
+    margin-top: -1.8rem;
+}
+.login-form .form-group, .register-form .form-group{
+    margin-top: 1rem;
+}
+
+.start_here_all{
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+
+ 
+}
+.login-form .new{
+    font-size: 1.4rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+
+}
+
+.login-form .start_here{
+    font-size: 1.6;
+    font-family: sans-serif ;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.login-form  .start_here_all a{
+    text-decoration: none;
+    color: rgb(33,37,41)
+}
+.login-form .btn, .register-form .btn {
+    height: 4rem;
+    margin-top: 3rem;
+    border-radius: 1.5rem;      
+}
+
+.login-form .form-control, .register-form .form-control {
+    height: 4rem;
+    border-radius: 1.5rem;      
+    
+}
+.login-form .form-control:focus, .register-form .form-control:focus{
+    border-radius: 1.8rem;     
+    box-shadow: none;   /* Bootstrapten çekilen inputların üzerine tıklandığı zaman default olarak gelen mavi çerçeve rengini yok ediyo*/
+    transition-duration: 3s;
+}
+
+
+.login-form hr, .register-form hr{
+    margin: 1rem auto;
+    width: 38rem;   
+
+}
+
+.form-control:focus::-webkit-input-placeholder  {  /* Formlara tıkladıktan sonra içeride yzan place holder ın silinmesi*/
+    color:transparent;
+
+}
+
+.returnBackArrow{
+    float: left;
+    font-size: 2rem;
+    margin-right: 1rem;
+    margin-left:45rem;
+}
+
+.return p{
+    float: left;
+    font-size: 1.2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+
+
+}
+
+.returnBackArrow, .returnBack{
+    transform: translateY(-1.5rem);
+}
+
+.return a{
+    color:rgb(33,37,41);
+}
+
+.return a:hover{
+    color:rgb(33,37,41);
+    font-size:1.5rem ;
+}
+.show_passworld_word{
+    margin-top: 5rem;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    font-style: italic;
+    float: right;
+    transform: translateY(-8.1rem);
+    text-decoration: underline;
+
+}
+
+
+.how_hide_password_box{
+   margin-top: 5rem; 
+   margin-right: 2.5rem;
+   width: 2rem; 
+   height: 2rem; 
+   float: right;
+   transform: translateY(-8.1rem);
+   margin-right: 3.5rem;
+}
+
+
+.register-form .btn-danger{
+    transform: translateY(-4rem);
+}
+
+.accordion .card-link{
+width: 20rem;
+height: 10rem;
+color:Red;
+margin-top: 3rem;
+font-size: 5rem;
+}
+
+.bookImg{
+    float:left; 
+    margin-top: 8rem;
+    margin-left: 4rem;
+    margin-right: 3rem;
+    margin-bottom: 13.5rem;
+    width: 30rem;
+    height: 50rem;
+
+}
+
+
+.bookImg img{
+    object-fit: fill;
+
+}
+
+.bookContent{
+    float:left;
+    margin-top: 8rem;
+    width: 70rem;
+    height: 50rem;
+    margin-right: 4rem;
+    margin-bottom: 13.4rem;
+    background-color: rgb(230,230,230);
+    border-radius: 2rem;
+    border: 1px solid #ccc;;
+}
+
+
+ .contentbg {
+    background-color: white;
+    border-radius: 4rem;
+    width: 110rem;
+    height: 58rem;
+    margin-top: 5rem;
+    margin-bottom: 6.8rem;
+    margin-left: auto;
+    margin-right: auto;
+} 
+
+.bookNameWord p{
+    font-family: 'Heebo', sans-serif;
+    float: left;
+    font-size: 1.6rem;
+    margin-top: 4rem;
+    margin-left: 4rem;
+  
+}
+.bookName p{
+    font-family: 'Montaga', serif;
+    float: left;
+
+    font-size: 2.2rem;
+    margin-top: 3.5rem;   
+}
+
+.authorWord p{
+    font-family: 'Heebo', sans-serif;
+    float: left;
+    clear:left;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    margin-left: 4rem;
+    margin-right: 3rem;
+}
+.author p{
+    font-family: 'Montaga', serif;
+    float: left;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-top: 1.2rem;
+    
+}
+
+.categoryWord p{
+    font-family: 'Heebo', sans-serif;
+    float: left;
+    clear:left;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    margin-left: 4rem;
+    
+}
+.category p{
+    font-family: 'Montaga', serif;
+    float: left;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-top: 1.2rem;
+    
+}
+
+.bookPageWord p{
+    font-family: 'Heebo', sans-serif;
+    float: left;
+    clear:left;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    margin-left: 4rem;
+    
+}
+.bookPage p{
+    font-family: 'Montaga', serif;
+    float: left;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-top: 1.2rem;
+    
+}
+
+.isbnWord p{
+    font-family: 'Heebo', sans-serif;
+    float: left;
+    clear:left;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    margin-left: 4rem;
+    
+}
+.isbn p{
+    font-family: 'Montaga', serif;
+    float: left;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-top: 1.2rem;
+    
+}
+  
+  hr.sep {
+    border: 0; 
+    height: 1px; 
+    width: 14rem;
+    background-image: linear-gradient(to right, black,white);
+ 
+}
+  
+.sep1{
+    transform: translate(4.2rem, -39rem);
+}
+
+.sep2{
+    transform: translate(4.2rem, -34.5rem);
+}
+
+.sep3{
+    transform: translate(4.2rem, -30rem);
+}
+
+.sep4{
+    transform: translate(4.2rem, -25.5rem);
+}
+
+.sep5{
+    transform: translate(4.2rem, -21rem);
+}
+
+.notFound h1{
+    margin-top: 5rem;
+    margin-left:0rem;
+    font-size: 5rem;
+    float:left;
+   
+}
+
+.notFound a{
+    margin-top: 1rem;
+    margin-left:5rem;
+    font-size: 2rem;
+    float:left;
+    clear:left;
+
+}
+
+.catHeader {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 6rem;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 0.3rem;
+}
+.catBookName {
+     margin-bottom:3rem; 
+
+}
+
+.catBookName img{
+    object-fit: fill;
+    height: 42rem;
+    
+}
+
+.catBookName p{
+    margin-top: 1.2rem;
+    font-size: 2rem;
+    color:#393E46;
+   
+
+}
+
+.catBookName a:hover{
+    text-decoration: none;
+  
+}
+
+.pdf{
+    width: 600px;
+}
+.row h3{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12rem;
+    font-size: 4rem;
+    color:#8D211F;
+  
+}
+
+.extraCategories{
+    padding-top:1.8rem;
+    /* padding-top: calc(130px + 6rem);  calc'ın amacı 1.6 rem i hesaplması (yukarıda html class'ına 10px verilmişti 10px * 1.6rem) 160px olarak random rakam değil web side sğ tık incele kısmından nav'ın uzunluğu  */
+    padding-bottom: 6rem;
+    text-align: center;
+    height: 100%;
+    background-color:rgb(230,207,139);
+   
+}
+
+
+.arrow .NoBook{
+    margin-left: 41rem;
+    text-decoration: none;
+}
+
+.arrow .fa-angle-double-left{
+    font-size: 3rem;
+    margin-top: 25rem;
+    transform: translateX(-44rem);
+       
+}
+
+.arrow .fa-angle-double-right{
+    font-size: 3rem;
+    transform: translateY(0rem);  
+    transform: translateX(-42rem);
+}
+
+.arrow .return {
+    font-size: 4rem;
+
+}
+
+
+.return2 span {
+    font-size: 2.4rem;
+    color:rgb(33,37,41);
+    position: fixed;
+    top:16rem;
+    right: 10rem;
+    border:2px solid rgb(230,207,139);
+    padding:1.5rem;
+    border-radius: .5rem;
+
+}
+.return2 span:hover {
+    background-color:rgb(230,207,139);
+    transition-property: all;           
+    transition-duration: 0.6s;
+    transition-timing-function: ease-in-out; 
+}
+
+.modal h2{
+    color:rgb(50,54,57);
+    margin-left:2rem;
+}
+
+.cart-image{
+    width: 14rem;
+    height: 20rem;
+    object-fit: fill;
+}
+
+.table p{
+    font-size: 2.2rem;
+    font-family: -apple-system;
+    margin-top: 2.5rem;
+    text-align: start;
+ 
+}
+
+.list_item{
+    color:#212529;
+    font-size: 2rem;
+    margin-top: 2rem;
+
+}
+
+.table .bookNameSpecial{
+    padding-left:1.4rem;
+}
+
+.table .authorNameSpecial{
+    padding-left:1.6rem;
+}
+
+.table .pageNameSpecial{
+    padding-left:-1.6rem;
+}
+
+header .ReadNow{
+    opacity: .5rem;
+}
+
+
+.container .enter{
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 6rem;
+    margin-right: 10rem;
+    color:#212529;
+}
+
+.container #searchinfo{
+    text-align: center;
+    color:#212529;
+    font-size: 3rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    margin-right: 10rem;
+    width: 100%;
+}
+
+
+#searchItem a{
+    text-decoration: none;
+}
+#foundNumber{
+    font-size: 4rem;
+
+}
+#searchItem{
+    margin-bottom: 5rem;
+    border:1px solid #212529;
+    margin-right:3rem;
+    padding: 1.5rem;
+    width: 29%;
+}
+
+#noResult{
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 6rem;
+    margin-right: 10rem;
+    color:#212529;
+}
+
+#noResult span{
+    font-size: 4rem;
+    color:rgb(230,207,139);
+    
+}
+#searchItem img{
+    height: 40rem;
+    object-fit: fill;
+    margin-bottom: 2rem;
+
+}
+
+#searchBookName{
+    font-size: 2rem;
+    color:#212529;
+    height: 6rem;
+    
+}
+
+.container #searchItem #author{
+    font-size: 1rem;
+    color:rgb(140,113,30);
+    font-weight: bolder;
+    float:left;
+    margin-left:8rem;
+    margin-top:.5rem;
+    margin-right:.5rem;
+
+}
+
+
+#searchAuthor{
+    color:#212529;
+    font-size: 1.6rem;
+ 
+}
+
+#searchCategory{
+    color:#212529;
+    font-size: 1.6rem;
+    float:left;
+    margin-left:3rem;
+}
+
+#searchPageNumber{
+    color:#212529;
+    font-size: 1.6rem;
+    float:right;
+    margin-right:3rem;
+}
+
+#page{
+    font-size:1rem;
+    font-weight: bolder;
+    color:rgb(140,113,30);
+}
+
+#pdf_popup{
+    height:90rem; 
+    width:150rem; 
+    margin:auto -60rem;
+}
+
+#searchNewBooks{
+    width:30rem;
+
+}
+
+#searchNewBooks a{
+    font-size: 1.6rem;
+}
+
+#searchNewBooks a:hover{
+color:black;
+transition-property: all;           
+transition-duration: 0.6s;
+transition-timing-function: ease-in-out; 
+border-color:none;
+}
+
+.guide{
+    background-color: rgba(255,255,255,0.6);
+    width: 100%;
+
+    box-shadow: 7px 7px 47px 2px rgba(0,0,0,0.8);
+    margin-bottom: 0;
+    border-radius: 2rem;
+    border: 0.15rem solid #8D211F;
+    padding: 2rem;
+}
+
+.profileImg {
+    width:23rem;
+    margin:5rem auto;
+
+}
+
+.p_card {
+    box-shadow: 5rem 5rem 10rem 5rem rgba(0, 0, 0, 0.2);
+    width: 80rem;
+    margin: 6rem auto;
+    text-align: center;
+    font-family: arial;
+ 
+}
+
+
+.pname{
+    margin:0rem auto;
+    font-size: 4.8rem;
+
+}
+
+.p_mail {
+    color: grey;
+    font-size: 2.45rem;
+    margin-bottom:2rem;
+}
+
+
+.fa-phone-square-alt{
+    transform: translate(-12.5rem, 16.5rem);
+    font-size: 3.2rem;
+}
+.fa-id-card-alt{
+    transform: translate(-13.5rem, 22rem);
+    font-size: 2.8rem;
+}
+
+.p_phoneNumber{
+    font-size: 3rem;
+    margin-bottom:1.6rem;
+
+}
+
+.p_unique{
+    font-size: 2.4rem; 
+    margin-bottom:1.5rem;
+    letter-spacing: .2rem;
+}
+
+.p-button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 0.8rem;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 75%;
+    font-size: 1.8rem;
+    margin-top:2rem;
+  }
+
+  .p-button:hover{
+    margin: 0rem auto;
+    width: 100%;
+    transition-property: all;      
+    transition-duration: 0.8s;
+    transition-timing-function: ease-in-out;
+    background-color: rgb(230,207,139);
+    color:#212529;
+    margin-top:2rem;
+  
+  }
+
+ 
+
+  .p_content a {
+    text-decoration: none;
+    font-size: 2.2rem;
+    color: black;
+  }
+
+  #cart-container-main{
+    min-height: calc(100vh - 222px);
+  }
+
+
+  
+ .upButton{
+    position: fixed;
+    top:20%;
+    left:7%;
+    width: 10rem;
+	border-left: 6rem solid transparent;
+	border-right: 6rem solid transparent;
+	border-bottom: 10rem solid  rgb(45,116,147);
+       
+ }
+
+ .downButton{
+    position: fixed;
+    top:35%;
+    left:7%;
+    width: 10rem;
+	border-left: 6rem solid transparent;
+	border-right: 6rem solid transparent;
+	border-top: 10rem solid  rgb(45,116,147);
+       
+ }
+
+   
+ .homeButton{
+    position: fixed;
+    top:55%;
+    left:6%;
+    width: 16rem;
+    border: 1rem solid rgb(45,116,147);
+    border-radius: 2rem;
+    font-size: 1.6rem;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(45,116,147);
+    color: rgb(33,37,41);
+       
+ }
+
+ .endButton{
+    position: fixed;
+    top:65%;
+    left:6%;
+    width: 16rem;
+    border: 1rem solid rgb(45,116,147);
+    border-radius: 2rem;
+    font-size: 1.6rem;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(45,116,147);
+    color: rgb(33,37,41);
+ }
+
+.bg-grey{
+    margin-bottom:6rem;
+}
+
+.guide .madde li p{
+    text-align: left;
+    margin-top:1.6rem;
+    margin-left:3rem;
+    margin-right:2rem;
+    color:rgb(33,37,41);
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
